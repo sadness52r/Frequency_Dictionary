@@ -31,7 +31,7 @@ public class DictionaryController {
     }
     public void WriteToFile(File file) throws IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))){
-            for (Map.Entry entry: frequencies.entrySet()) {
+            for (Map.Entry<Character, Integer> entry: frequencies.entrySet()) {
                 bufferedWriter.write(entry.toString() + "\n");
             }
         }
